@@ -1,0 +1,28 @@
+{
+    "rfLanguageServer.libraries": [
+        "BuiltIn-2.7.7",
+        "BuiltIn-3.1.1",
+        "Collections-2.7.7",
+        "Collections-3.1.1",
+        "DateTime-2.8.7",
+        "DateTime-3.1.1",
+        "Dialogs-2.7.7",
+        "Dialogs-3.1.1",
+        "OperatingSystem-3.1.1",
+        "OperatingSystem-2.9.2",
+        "Process-3.1.1",
+        "Process-2.9.2",
+        "Screenshot-3.1.1",
+        "Screenshot-2.9.2",
+        "Selenium2Library-1.8.0",
+        "Selenium2Library-3.0.0",
+        "SeleniumLibrary-3.2.0",
+        "SeleniumLibrary-3.3.1",
+        "String-2.8.7",
+        "String-3.1.1",
+        "Telnet-2.7.7",
+        "Telnet-3.1.1",
+        "XML-2.8.7",
+        "XML-3.1.1"
+    ]
+}
