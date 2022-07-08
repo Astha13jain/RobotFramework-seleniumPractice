@@ -1,73 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0 (Python 3.10.4 on win32)" generated="20220707 16:59:53.997" rpa="false" schemaversion="3">
-<suite id="s1" name="Frames" source="C:\robotpractice\TestCases\frames.robot">
-<test id="s1-t1" name="FramesTest" line="10">
+<robot generator="Robot 5.0 (Python 3.10.4 on win32)" generated="20220708 12:45:08.970" rpa="false" schemaversion="3">
+<suite id="s1" name="Table" source="C:\robotpractice\TestCases\table.robot">
+<test id="s1-t1" name="TableTest" line="11">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220707 16:59:54.224" level="INFO">Opening browser 'chrome' to base url 'https://www.selenium.dev/selenium/docs/api/java/index.html?help-doc.html'.</msg>
-<status status="PASS" starttime="20220707 16:59:54.223" endtime="20220707 16:59:58.569"/>
+<msg timestamp="20220708 12:45:09.453" level="INFO">Opening browser 'chrome' to base url 'https://testautomationpractice.blogspot.com/'.</msg>
+<status status="PASS" starttime="20220708 12:45:09.452" endtime="20220708 12:45:16.820"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220707 16:59:58.570" endtime="20220707 16:59:58.692"/>
+<status status="PASS" starttime="20220708 12:45:16.822" endtime="20220708 12:45:16.992"/>
 </kw>
-<kw name="Select Frame" library="SeleniumLibrary">
-<arg>packageListFrame</arg>
-<doc>Sets frame identified by ``locator`` as the current frame.</doc>
-<msg timestamp="20220707 16:59:58.693" level="INFO">Selecting frame 'packageListFrame'.</msg>
-<status status="PASS" starttime="20220707 16:59:58.693" endtime="20220707 16:59:58.817"/>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${rowscount}</var>
+<arg>xpath://table[@name='BookTable']/tbody/tr</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220708 12:45:17.055" level="INFO">${rowscount} = 7</msg>
+<status status="PASS" starttime="20220708 12:45:16.994" endtime="20220708 12:45:17.055"/>
 </kw>
-<kw name="Click Link" library="SeleniumLibrary">
-<arg>org.openqa.selenium</arg>
-<doc>Clicks a link identified by ``locator``.</doc>
-<msg timestamp="20220707 16:59:58.818" level="INFO">Clicking link 'org.openqa.selenium'.</msg>
-<status status="PASS" starttime="20220707 16:59:58.818" endtime="20220707 16:59:58.909"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${rowscount}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220708 12:45:17.056" endtime="20220708 12:45:17.060"/>
 </kw>
-<kw name="Unselect Frame" library="SeleniumLibrary">
-<doc>Sets the main frame as the current frame.</doc>
-<status status="PASS" starttime="20220707 16:59:58.909" endtime="20220707 16:59:58.911"/>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${columncount}</var>
+<arg>xpath://table[@name='BookTable']/tbody/tr[1]/th</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220708 12:45:17.107" level="INFO">${columncount} = 4</msg>
+<status status="PASS" starttime="20220708 12:45:17.061" endtime="20220708 12:45:17.108"/>
 </kw>
-<kw name="Select Frame" library="SeleniumLibrary">
-<arg>packageFrame</arg>
-<doc>Sets frame identified by ``locator`` as the current frame.</doc>
-<msg timestamp="20220707 16:59:58.912" level="INFO">Selecting frame 'packageFrame'.</msg>
-<status status="PASS" starttime="20220707 16:59:58.911" endtime="20220707 16:59:59.156"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${columncount}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220708 12:45:17.109" endtime="20220708 12:45:17.113"/>
 </kw>
-<kw name="Click Link" library="SeleniumLibrary">
-<arg>WebDriver</arg>
-<doc>Clicks a link identified by ``locator``.</doc>
-<msg timestamp="20220707 16:59:59.157" level="INFO">Clicking link 'WebDriver'.</msg>
-<status status="PASS" starttime="20220707 16:59:59.157" endtime="20220707 16:59:59.227"/>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${fifthdata}</var>
+<arg>xpath://table[@name='BookTable']/tbody/tr[5]/td[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220708 12:45:17.167" level="INFO">${fifthdata} = Master In Selenium</msg>
+<status status="PASS" starttime="20220708 12:45:17.115" endtime="20220708 12:45:17.168"/>
 </kw>
-<kw name="Unselect Frame" library="SeleniumLibrary">
-<doc>Sets the main frame as the current frame.</doc>
-<status status="PASS" starttime="20220707 16:59:59.228" endtime="20220707 16:59:59.231"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${fifthdata}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220708 12:45:17.169" endtime="20220708 12:45:17.170"/>
 </kw>
-<kw name="Select Frame" library="SeleniumLibrary">
-<arg>classFrame</arg>
-<doc>Sets frame identified by ``locator`` as the current frame.</doc>
-<msg timestamp="20220707 16:59:59.232" level="INFO">Selecting frame 'classFrame'.</msg>
-<status status="PASS" starttime="20220707 16:59:59.232" endtime="20220707 16:59:59.801"/>
+<kw name="Table Column Should Contain" library="SeleniumLibrary">
+<arg>name:BookTable</arg>
+<arg>2</arg>
+<arg>Author</arg>
+<doc>Verifies table column contains text ``expected``.</doc>
+<status status="PASS" starttime="20220708 12:45:17.171" endtime="20220708 12:45:17.270"/>
 </kw>
-<kw name="Click Link" library="SeleniumLibrary">
-<arg>Index</arg>
-<doc>Clicks a link identified by ``locator``.</doc>
-<msg timestamp="20220707 16:59:59.802" level="INFO">Clicking link 'Index'.</msg>
-<status status="PASS" starttime="20220707 16:59:59.802" endtime="20220707 17:00:01.134"/>
+<kw name="Table Row Should Contain" library="SeleniumLibrary">
+<arg>name:BookTable</arg>
+<arg>4</arg>
+<arg>Learn JS</arg>
+<doc>Verifies that table row contains text ``expected``.</doc>
+<status status="PASS" starttime="20220708 12:45:17.273" endtime="20220708 12:45:17.416"/>
 </kw>
-<kw name="Unselect Frame" library="SeleniumLibrary">
-<doc>Sets the main frame as the current frame.</doc>
-<status status="PASS" starttime="20220707 17:00:01.135" endtime="20220707 17:00:01.157"/>
-</kw>
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220707 17:00:01.157" endtime="20220707 17:00:03.244"/>
-</kw>
-<status status="PASS" starttime="20220707 16:59:54.223" endtime="20220707 17:00:03.244"/>
+<status status="PASS" starttime="20220708 12:45:09.451" endtime="20220708 12:45:17.418"/>
 </test>
-<status status="PASS" starttime="20220707 16:59:54.013" endtime="20220707 17:00:03.244"/>
+<status status="PASS" starttime="20220708 12:45:08.975" endtime="20220708 12:45:17.424"/>
 </suite>
 <statistics>
 <total>
@@ -76,7 +74,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Frames">Frames</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Table">Table</stat>
 </suite>
 </statistics>
 <errors>
